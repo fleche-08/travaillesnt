@@ -19,6 +19,7 @@
         h1 {
             margin: 20px 0;
             color: #333;
+            animation: glow 4s ease-in-out infinite;
         }
 
         .image-container {
@@ -49,15 +50,16 @@
             text-align: center;
             color: #555;
             font-size: 1rem;
-            animation: glow 4s ease-in-out infinite;
+            display: flex;
+            justify-content: center;
         }
 
         @keyframes glow {
             0%, 100% {
-                text-shadow: 0 0 5px rgba(173, 216, 230, 0); /* Lumière invisible */
+                text-shadow: 0 0 5px rgba(0, 191, 255, 0); /* Invisible au début et à la fin */
             }
             50% {
-                text-shadow: 0 0 15px rgba(173, 216, 230, 1); /* Lumière bleue claire */
+                text-shadow: 0 0 20px rgba(0, 191, 255, 1); /* Lueur plus intense au milieu */
             }
         }
     </style>
